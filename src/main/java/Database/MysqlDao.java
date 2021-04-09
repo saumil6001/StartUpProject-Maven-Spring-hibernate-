@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Dao {
+public class MysqlDao {
 	private static Connection connection = null;
 	private final static String database_url = "jdbc:mysql://localhost/";
 	private final static String database_name = "test";
@@ -13,11 +13,9 @@ public class Dao {
 	private final static String database_driverName = "com.mysql.jdbc.Driver";
 
 	public static void main(String[] args) {
-
 		if (connect()) {
 			System.out.println("Connected");
 		}
-
 	}
 
 	public static boolean connect() {
